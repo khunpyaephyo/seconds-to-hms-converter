@@ -4,7 +4,7 @@ public class Application {
 
 	public static void main(String[] args) {
 		SecondsToHMSConverter converter = new SecondsToHMSConverter();
-		converter.convert(-1);
+		converter.convert(7500);
 	}
 	
 }
