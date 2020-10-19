@@ -9,19 +9,14 @@ public class SecondsToHMSConverter {
 			return;
 		}
 		
-		int secondsRemained = seconds;
-		int hourValue = secondsRemained / 3600;
+		int hourValue = seconds / 3600;
+		int minuteValue = (seconds%3600) / 60;
+		int secondValue = seconds%60;
 		
-		secondsRemained -= (hourValue * 3600);
-		int minuteValue = (secondsRemained) / 60;
-		
-		secondsRemained -= (minuteValue * 60);
-		int secondValue = secondsRemained;
-		
-		String result = String.format("%02d:%02d:%02d%n" , hourValue , minuteValue , secondValue);
+		String result = String.format("%02d:%02d:%02d" , hourValue , minuteValue , secondValue);
 				
 		
-		System.out.printf(result);
+		System.out.println(result);
 		
 	}
 	
